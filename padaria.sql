@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Mar-2023 às 00:59
+-- Tempo de geração: 27-Mar-2023 às 00:15
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -39,14 +39,14 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`cod_produto`, `nome`, `quantidade`, `qtd_media`) VALUES
-(1, 'Pão de sal', 120, 150),
-(2, 'Pão de doce', 10, 100),
+(1, 'Pão de sal', 119, 150),
+(2, 'Pão de doce', 129, 100),
 (3, 'Empada', 80, 80),
 (4, 'Torta de frango', 79, 50),
-(5, 'Pão de queijo', 29, 120),
-(6, 'Bolo de chocolate', 0, 30),
-(7, 'Texa', 18, 25),
-(8, 'Pizza', 39, 50);
+(5, 'Pão de queijo', 200, 120),
+(6, 'Bolo de chocolate', 23, 30),
+(7, 'Texa', 22, 25),
+(8, 'Pizza', 60, 50);
 
 --
 -- Índices para tabelas despejadas

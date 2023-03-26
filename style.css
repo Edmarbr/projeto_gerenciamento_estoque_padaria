@@ -102,3 +102,30 @@ input.inputQTD {
     width: 50px;
 }
 
+@media screen and (max-width: 630px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        display: block;
+    }
+
+    main .tabela_estoque {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        width: 400px;
+    }
+
+    main .tabela_estoque h1 {
+        margin: 0px 10px;
+    }
+
+    main .tabela_estoque #tabelaEstoque {
+        margin: 10px;
+    }
+}

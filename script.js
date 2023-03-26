@@ -4,6 +4,8 @@ const Tbody = document.getElementById("Tbody")
 const Form = document.getElementById("Form")
 const btnEnviar = document.getElementById("EnviarCompra")
 const QtdAtual = [...document.querySelectorAll(".QTDatual")]
+let precoFinal = document.getElementById("precoFinal")
+const precosTable = [...document.querySelectorAll(".precosTable")]
 
 
 // relacionando o id da label e aos ids dos inputs
@@ -56,11 +58,26 @@ btnEnviar.addEventListener("click", () => {
 
                 if (Number(el.value) > Number(QtdAtual[indice].textContent)) {          // verifica se o valor a ser comprado é maior do que a quantidade atual do estoque
                     alert("Quantidade de produtos excedida!")
+                    return false
                 } else {
                     Form.submit()           // se tudo estiver correto o formulário é enviado
                 }
             })
         }
     }, 0)
-    
 })
+
+setInterval(() => {
+    // Preço final
+    const input_qtd = [...document.querySelectorAll(".inputQTD")]
+    const precos = [1.00, 1.50, 4.00, 7.25, 3.75, 6.00, 8.00, 7.00]
+    precosTable.map((elem, indice) => {
+        elem.innerHTML = precos[indice].toFixed(2)      // adiciona o preço de cada produto na tabela
+    })
+    let valor = 0
+    input_qtd.map((ele) => {
+        let indice = ele.name.charAt(ele.name.length - 1)
+        valor += Number(ele.value) * Number(precos[indice])
+    })
+    precoFinal.innerHTML = `Preço: R$ ${valor.toFixed(2)} reais`
+}, 0)

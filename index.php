@@ -43,6 +43,7 @@
                     </tbody>
                 </table>
                 <br>
+                <p id="precoFinal">Preço: R$ 0.00 reais</p><br>
                 <input type="button" value="Finalizar Compra" id="EnviarCompra">
             </form>
         </div>
@@ -53,7 +54,8 @@
                 <thead>
                     <th scope="col">Nome</th>
                     <th scope="col">Quantidade</th>
-                    <th scope="col">Estado</th>
+                    <th scope="col">Estado do estoque</th>
+                    <th scope="col">Preço por unidade</th>
                 </thead>
                 <tbody>
                     <?php
@@ -76,8 +78,10 @@
                                 <td>$valor[0]</td>
                                 <td class=QTDatual>$valor[1]</td>
                                 <td>$estoque</td>
+                                <td class=precosTable></td>
                               </tr>";       // escreve o produto, a quantidade e o estado do estoque
                     }
+                    
 
                     mysqli_close($conectarBD);
                     ?>
@@ -90,3 +94,4 @@
 </body>
 
 </html>
+
