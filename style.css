@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+table {             /* configuração geral para as tabelas */
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+header h1 {
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div_left {
+    margin: 10px;
+}
+
+.div_CheckButton{
+    margin: 5px;
+}
+
+.checkButtons {
+    margin-right: 5px;
+}
+
+.Labels {
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.checkButtons, .Labels {
+    cursor: pointer;
+}
+
+.checkButtons:checked + label::after {
+    content: "✔";
+    color: #1fde1f;
+    font-size: 22px;
+    margin-left: 3px;
+}
+
+form {
+    margin-left: 5px;
+}
+
+form input#EnviarCompra {
+    background-color: #f6fcfcd1;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+form #EnviarCompra:hover {
+    cursor: pointer;
+}
+
+.tabela_estoque {
+    margin-right: 10px;
+    width: 50%;
+}
+
+.tabela_estoque h1 {
+    text-align: right;
+    margin-right: 17%;
+}
+
+table#tabelaEstoque {
+    width: 60%;
+    margin-left: auto;
+    height: 500px;
+}
+
+table#tabelaEstoque th, table#tabelaEstoque td {
+    border: 2px solid black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+tr {
+    text-align: center;
+}
+
+input.inputQTD {
+    width: 50px;
+}
+
